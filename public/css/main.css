@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.bg {
+    background-color: #0b121f;
+}
+
+.contain-auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    margin: 25px 100px;
+    /* transform: scale(0.85); */
+}
+
+.cities {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    background-color: #202c3d;
+    border-radius: 20px;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 25px;
+}
+
+.data {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 10px 0px;
+}
+
+.city-name {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.forecast {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #202c3d;
+    border-radius: 25px;
+    /* height: max-content; */
+}
+
+.main-data {
+    display: flex;
+    margin: 10px 80px;
+    gap: 100px;
+}
+
+.state-img img {
+    width: 200px;
+    margin-top: 10px;
+}
+
+.city-weather {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 70px 50px 1fr;
+}
+
+.city-weather .temp {
+    font-size: 80px;
+}
+
+.city-weather .chance {
+    color: #6c6e72;
+}
+
+.weather-breakdown {
+    background-color: #202c3d;
+    margin: 10px 20px 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.day {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr;
+    align-items: center;
+    font-size: 12px;
+}
+
+.days > :last-child{
+    display: none;
+}
+
+.forecast-img img {
+    width: 40px;
+}
+
+.forecast .title {
+    color: #697482;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.day-name {
+    color: #697482;
+}
+
+.day-temp span {
+    color: #697482;
+}
+
+.time-range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* .time-img img {
+    width: 80px;
+} */
+
+.range .time{
+    margin-bottom: -20px;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: auto;
+    background-color: #697482;
+}
+
+.weather-breakdown .title {
+    margin: 10px 10px;
+}
+
+.range .time {
+    color: #697482;
+}
+
+.range .tempreture {
+    font-size: 18px;
+    margin-top: -15px;
+}
+
+.air-condition {
+    background-color: #202c3d;
+    margin: 20px 20px 0px 0px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.condition {
+    display: flex;
+    gap: 10px;
+}
+
+.condition i {
+    font-size: 25px;
+    color: #697482;
+}
+
+.condition-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.condition-data {
+    display: flex;
+    justify-content: space-around;
+}
+
+.condition-name {
+    color: #697482;
+}
+
+.condition-val {
+    font-size: 30px;
+}
+
+.air-condition .heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.air-condition .heading button {
+    border-radius: 20px;
+    height: 35px;
+    transform: scale(0.9);
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+
+.city-btn {
+    border: none;
+    background-color: rgb(0, 153, 112);
+    padding: 5px 7px;
+    border-radius: 10px;
+    width: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.selected {
+    background-color: white;
+    color: rgb(0, 153, 112);
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.city-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 3px 8px;
+    ;
+}
+
+.time-range> :last-child {
+    display: none;
+}
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    text-align: center;
+}
+
+.loading-overlay .inner-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-text{
+    font-size: 20px;
+    font-weight: 500;
+}
